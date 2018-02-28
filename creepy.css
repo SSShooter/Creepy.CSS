@@ -1,0 +1,71 @@
+html {
+  background: #000;
+  color: #ccc;
+  font-size: 1em;
+  filter: sepia(20%);
+  font-family: 'Special Elite', cursive;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  transition: all 0.5s;
+  color: #af111c;
+  font-family: 'Nosifer', cursive;
+}
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+  filter: drop-shadow(0px 5px 0px #700000);
+}
+div,
+p,
+ul,
+ol,
+button,
+pre,
+code,
+kbd,
+samp {
+  font-family: 'Special Elite', cursive;
+}
+li {
+  list-style: none;
+  margin: 5px 0;
+}
+li:before {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  background-image: url('skull.svg');
+  margin-right: 10px;
+}
+button {
+  padding: 5px;
+  background: #af111c;
+  color: #ccc;
+  border: none;
+  border-radius: 3px;
+}
+a {
+  color: inherit;
+}
+input,
+textarea,
+button {
+  outline-color: red;
+}
+input,
+textarea {
+  background-color: #700000;
+  color: #ccc;
+  border-radius: 3px;
+  border: none;
+}
