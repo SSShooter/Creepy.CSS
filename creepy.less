@@ -1,6 +1,6 @@
 @blood: #af111c;
-@deep-blood: #700000;
-@bright-blood: #ff1c2b;
+@deep-blood: darken(@blood, 20%);
+@bright-blood: lighten(@blood, 20%);
 
 html {
   background: #000;
@@ -15,10 +15,10 @@ h4,
 h5,
 h6 {
   transition: all 0.5s ease-in-out;
-  color: @blood;
+  color: @bright-blood;
   font-family: 'Nosifer', 'Microsoft YaHei', cursive;
   &:hover {
-    filter: drop-shadow(0px 0.1em 0px @deep-blood);
+    filter: drop-shadow(0px 0.1em 0px @blood) drop-shadow(0px 0.1em 0px @deep-blood);
   }
 }
 
@@ -159,13 +159,55 @@ textarea {
   }
 }
 
+table {
+  border-collapse: collapse;
+  box-shadow: 0 0 0 3px @blood;
+  border-radius: 3px;
+  tr {
+    th,
+    td {
+      padding: 20px;
+      border: @blood solid 1px;
+    }
+    th {
+      border-top: none;
+      height: 1em;
+      color: @blood;
+    }
+    td:first-of-type,
+    th:first-of-type {
+      border-left: none;
+    }
+    td:last-of-type,
+    th:last-of-type {
+      border-right: none;
+    }
+  }
+  tr:last-of-type {
+    td {
+      border-bottom: none;
+    }
+    td:first-of-type {
+      border-bottom: none;
+      border-left: none;
+    }
+    td:last-of-type {
+      border-bottom: none;
+      border-right: none;
+    }
+  }
+}
+
+hr {
+}
+
 @keyframes dim {
   0%,
   100% {
     opacity: 1;
   }
   10% {
-    opacity: .7;
+    opacity: 0.7;
   }
   20% {
     opacity: 0.8;

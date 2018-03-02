@@ -10,7 +10,7 @@ h4,
 h5,
 h6 {
   transition: all 0.5s ease-in-out;
-  color: #af111c;
+  color: #ec3a46;
   font-family: 'Nosifer', 'Microsoft YaHei', cursive;
 }
 h1:hover,
@@ -19,7 +19,7 @@ h3:hover,
 h4:hover,
 h5:hover,
 h6:hover {
-  filter: drop-shadow(0px 0.1em 0px #700000);
+  filter: drop-shadow(0px 0.1em 0px #af111c) drop-shadow(0px 0.1em 0px #52080d);
 }
 .dim,
 p,
@@ -59,7 +59,7 @@ ol li {
 }
 ol li:before {
   content: counter(li);
-  color: #ff1c2b;
+  color: #ec3a46;
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -82,7 +82,7 @@ button {
   border-radius: 3px;
 }
 button:hover {
-  background: #ff1c2b;
+  background: #ec3a46;
 }
 a {
   color: inherit;
@@ -90,11 +90,11 @@ a {
 input,
 textarea,
 button {
-  outline-color: #ff1c2b;
+  outline-color: #ec3a46;
 }
 input,
 textarea {
-  background-color: #700000;
+  background-color: #52080d;
   color: #fff;
   border-radius: 3px;
   border: none;
@@ -121,7 +121,7 @@ textarea {
   transition: all 0.2s ease-in;
 }
 [type='radio']:checked + label:before {
-  background: #ff1c2b;
+  background: #ec3a46;
 }
 [type='checkbox'] + label {
   line-height: 1.25em;
@@ -142,13 +142,47 @@ textarea {
 [type='checkbox']:checked + label:before {
   transform: scale(1, 1);
 }
+table {
+  border-collapse: collapse;
+  box-shadow: 0 0 0 3px #af111c;
+  border-radius: 3px;
+}
+table tr th,
+table tr td {
+  padding: 20px;
+  border: #af111c solid 1px;
+}
+table tr th {
+  border-top: none;
+  height: 1em;
+  color: #af111c;
+}
+table tr td:first-of-type,
+table tr th:first-of-type {
+  border-left: none;
+}
+table tr td:last-of-type,
+table tr th:last-of-type {
+  border-right: none;
+}
+table tr:last-of-type td {
+  border-bottom: none;
+}
+table tr:last-of-type td:first-of-type {
+  border-bottom: none;
+  border-left: none;
+}
+table tr:last-of-type td:last-of-type {
+  border-bottom: none;
+  border-right: none;
+}
 @keyframes dim {
   0%,
   100% {
     opacity: 1;
   }
   10% {
-    opacity: .7;
+    opacity: 0.7;
   }
   20% {
     opacity: 0.8;
