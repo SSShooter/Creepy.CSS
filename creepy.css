@@ -21,15 +21,7 @@ h5:hover,
 h6:hover {
   filter: drop-shadow(0px 0.1em 0px #af111c) drop-shadow(0px 0.1em 0px #52080d);
 }
-.dim,
-p,
-ul,
-ol,
-button,
-pre,
-code,
-kbd,
-samp {
+body {
   font-family: 'Special Elite', cursive;
   animation: dim 30s ease-in-out infinite;
 }
@@ -155,7 +147,7 @@ table tr td {
 table tr th {
   border-top: none;
   height: 1em;
-  color: #af111c;
+  color: #ec3a46;
 }
 table tr td:first-of-type,
 table tr th:first-of-type {
@@ -176,8 +168,24 @@ table tr:last-of-type td:last-of-type {
   border-bottom: none;
   border-right: none;
 }
-hr {
-  color: #ec3a46;
+.divider {
+  height: 4px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px #ec3a46;
+  background: linear-gradient(45deg, #ec3a46, #52080d, #af111c);
+  background-size: 600% 600%;
+  animation: flow 9s ease infinite;
+}
+@keyframes flow {
+  0% {
+    background-position: 11% 0%;
+  }
+  50% {
+    background-position: 90% 100%;
+  }
+  100% {
+    background-position: 11% 0%;
+  }
 }
 @keyframes dim {
   0%,
@@ -194,7 +202,7 @@ hr {
     opacity: 0.6;
   }
   40% {
-    opacity: 0.5;
+    opacity: 0.7;
   }
   50% {
     opacity: 0.8;
@@ -203,12 +211,12 @@ hr {
     opacity: 0.7;
   }
   70% {
-    opacity: 0.5;
+    opacity: 0.9;
   }
   80% {
     opacity: 0.7;
   }
   90% {
-    opacity: 6;
+    opacity: 0.6;
   }
 }

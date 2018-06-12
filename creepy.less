@@ -3,7 +3,7 @@
 @bright-blood: lighten(@blood, 20%);
 
 html {
-  background: #000;
+  background: #111111;
   color: #fff;
   font-family: 'Special Elite', 'Microsoft YaHei', cursive;
 }
@@ -18,19 +18,12 @@ h6 {
   color: @bright-blood;
   font-family: 'Nosifer', 'Microsoft YaHei', cursive;
   &:hover {
-    filter: drop-shadow(0px 0.1em 0px @blood) drop-shadow(0px 0.1em 0px @deep-blood);
+    filter: drop-shadow(0px 0.1em 0px @blood)
+      drop-shadow(0px 0.1em 0px @deep-blood);
   }
 }
 
-.dim,
-p,
-ul,
-ol,
-button,
-pre,
-code,
-kbd,
-samp {
+body {
   font-family: 'Special Elite', cursive;
   animation: dim 30s ease-in-out infinite;
 }
@@ -172,7 +165,7 @@ table {
     th {
       border-top: none;
       height: 1em;
-      color: @blood;
+      color: @bright-blood;
     }
     td:first-of-type,
     th:first-of-type {
@@ -198,8 +191,25 @@ table {
   }
 }
 
-hr {
-  color: @bright-blood;
+.divider {
+  height: 4px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px @bright-blood;
+  background: linear-gradient(45deg, @bright-blood, @deep-blood, @blood);
+  background-size: 600% 600%;
+  animation: flow 9s ease infinite;
+}
+
+@keyframes flow {
+  0% {
+    background-position: 11% 0%;
+  }
+  50% {
+    background-position: 90% 100%;
+  }
+  100% {
+    background-position: 11% 0%;
+  }
 }
 
 @keyframes dim {
@@ -217,7 +227,7 @@ hr {
     opacity: 0.6;
   }
   40% {
-    opacity: 0.5;
+    opacity: 0.7;
   }
   50% {
     opacity: 0.8;
@@ -226,12 +236,12 @@ hr {
     opacity: 0.7;
   }
   70% {
-    opacity: 0.5;
+    opacity: 0.9;
   }
   80% {
     opacity: 0.7;
   }
   90% {
-    opacity: 6;
+    opacity: 0.6;
   }
 }
