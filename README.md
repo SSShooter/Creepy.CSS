@@ -1,11 +1,9 @@
-# Creepy.CSS
+# CreepyUI
 a creepy style UI
 ## main color     
 #af111c     
 ## main font    
-[Nosifer](https://github.com/google/fonts/blob/master/ofl/nosifer/Nosifer-Regular.ttf)         
-## other
-css filter
+[Nosifer](https://github.com/google/fonts/blob/master/ofl/nosifer/Nosifer-Regular.ttf)       
 ## less -> css
 ```bash
 lessc creepy.less creepy.css
@@ -18,5 +16,22 @@ font + normalize + creepy.css
   <link rel="stylesheet" href="./normalize.css">
   <link rel="stylesheet" href="./creepy.css">
 </head>
+jumpscare
+```html
+<script src="./creepy.js"></script>
+```
+```JavaScript
+/**
+ * jumpScare(url)
+ * jumpScare.show(during)
+ * jumpScare.loop(interval, during)
+ */
+let jumpScare = creepy.jumpScare('https://wx3.sinaimg.cn/mw690/686d7361ly1fsfd8dlce1j20qo0k0wnn.jpg')
+document.querySelector('.js-show').addEventListener('click',()=>{
+    jumpScare.show(2000)
+})
+document.querySelector('.js-loop').addEventListener('click',()=>{
+    jumpScare.loop(4000,1000)
+})
 ```
 

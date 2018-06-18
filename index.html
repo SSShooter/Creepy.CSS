@@ -3,33 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible"
-        content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Creepster|Nosifer|Special+Elite|Stardos+Stencil"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="./normalize.css">
-    <link rel="stylesheet"
-        href="./creepy.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Creepster|Nosifer|Special+Elite|Stardos+Stencil" rel="stylesheet">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./creepy.css">
     <title>CreepyDemo</title>
 </head>
 
 <body>
-    <div class="display"
-        style="padding:30px;">
+    <div class="display" style="padding:30px;">
         <div class="title">Creepy.CSS</div>
         <div style="margin-top:10px;">Icons made by
-            <a href="http://www.freepik.com"
-                title="Freepik">Freepik</a> from
-            <a href="https://www.flaticon.com/"
-                title="Flaticon">www.flaticon.com</a> is licensed by
-            <a href="http://creativecommons.org/licenses/by/3.0/"
-                title="Creative Commons BY 3.0"
-                target="_blank">CC 3.0 BY</a>
+            <a href="http://www.freepik.com" title="Freepik">Freepik</a> from
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
+            <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
         </div>
         <div>
             References
@@ -52,8 +41,7 @@
         <div class="divider"></div>
 
         <p>select</p>
-        <select name=""
-            id="">
+        <select name="" id="">
             <option value="daada">Audition</option>
             <option value="daada">The Happiness of the Katakuris</option>
             <option value="daada">Ju-on series</option>
@@ -62,29 +50,19 @@
 
         <p>radio</p>
         <div>
-            <input type="radio"
-                name="ra"
-                id="r1">
+            <input type="radio" name="ra" id="r1">
             <label for="r1">Notable films</label>
-            <input type="radio"
-                name="ra"
-                id="r2">
+            <input type="radio" name="ra" id="r2">
             <label for="r2">Notable directors</label>
         </div>
 
         <p>checkbox</p>
         <div>
-            <input type="checkbox"
-                name="vehicle"
-                value="Bike"
-                id="bike" />
+            <input type="checkbox" name="vehicle" value="Bike" id="bike" />
             <label for="bike">Anime and manga</label>
         </div>
         <div>
-            <input type="checkbox"
-                name="vehicle"
-                value="Car"
-                id="car" />
+            <input type="checkbox" name="vehicle" value="Car" id="car" />
             <label for="car">Video games</label>
         </div>
         <p>table</p>
@@ -129,10 +107,10 @@
         <p>input</p>
         <input type="text">
         <p>textarea</p>
-        <textarea name=""
-            id=""
-            cols="30"
-            rows="10"></textarea>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <p>jumpScare</p>
+        <button class="js-show">show</button>
+        <button class="js-loop">loop</button>
     </div>
 </body>
 <style>
@@ -148,5 +126,15 @@
         font-family: 'Reenie Beanie', cursive;
     }
 </style>
+<script src="./creepy.js"></script>
+<script>
+    let jumpScare = creepy.jumpScare('https://wx3.sinaimg.cn/mw690/686d7361ly1fsfd8dlce1j20qo0k0wnn.jpg')
+    document.querySelector('.js-show').addEventListener('click',()=>{
+        jumpScare.show(2000)
+    })
+    document.querySelector('.js-loop').addEventListener('click',()=>{
+        jumpScare.loop(4000,1000)
+    })
+</script>
 
 </html>
