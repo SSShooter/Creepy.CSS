@@ -26,12 +26,16 @@ let creepy = {
         conteiner.style.display = 'none'
       },
       loop(interval, during) {
-        setInterval(() => {
+        if (window.creepyJsJumpScareLoop) return
+        window.creepyJsJumpScareLoop = setInterval(() => {
           conteiner.style.display = 'block'
           setTimeout(() => {
             conteiner.style.display = 'none'
           }, during || 1000)
         }, interval || 1000 * 60)
+      },
+      cancelLoop(){
+        clearInterval(window.creepyJsJumpScareLoop)
       }
     }
   }

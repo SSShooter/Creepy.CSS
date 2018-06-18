@@ -111,6 +111,7 @@
         <p>jumpScare</p>
         <button class="js-show">show</button>
         <button class="js-loop">loop</button>
+        <button class="js-cancelloop">cancel loop</button>
     </div>
 </body>
 <style>
@@ -134,6 +135,9 @@
     })
     document.querySelector('.js-loop').addEventListener('click',()=>{
         jumpScare.loop(4000,1000)
+    })
+    document.querySelector('.js-cancelloop').addEventListener('click',()=>{
+        jumpScare.cancelLoop()
     })
 </script>
 
