@@ -23,7 +23,7 @@ h6:hover {
 }
 body {
   font-family: 'Special Elite', cursive;
-  animation: dim 30s ease-in-out infinite;
+  /* animation: dim 30s ease-in-out infinite; */
 }
 ul {
   padding-left: 10px;
@@ -219,4 +219,15 @@ table tr:last-of-type td:last-of-type {
   90% {
     opacity: 0.6;
   }
+}
+
+.bloody-box{
+  position: relative;
+  background-color: #af111c;
+  margin: 30px 0;
+}
+.bloody-box canvas{
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
