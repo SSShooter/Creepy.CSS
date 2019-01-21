@@ -1,6 +1,8 @@
 # CreepyUI
 a creepy style UI
-## main color     
+## thanks
+http://www.ankokukoubou.com/
+## main color     
 #af111c     
 ## main font    
 [Nosifer](https://github.com/google/fonts/blob/master/ofl/nosifer/Nosifer-Regular.ttf)       
