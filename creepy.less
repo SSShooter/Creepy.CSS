@@ -2,10 +2,40 @@
 @deep-blood: darken(@blood, 20%);
 @bright-blood: lighten(@blood, 20%);
 
+@font-face {
+  font-family: 'onryou';
+  src: url(creepyfont/onryou/onryou.TTF);
+  font-style: normal;
+  font-weight: normal;
+  // unicode-range: U+0025-00FF;
+}
+
+@font-face {
+  font-family: 'zomzi';
+  src: url(creepyfont/ankokuzonji/Zomzi.TTF);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'death';
+  src: url(creepyfont/DeathOne/DeathOne.TTF);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'dhand';
+  src: url(creepyfont/DemonHands/DemonHands.TTF);
+  font-style: normal;
+  font-weight: normal;
+}
+
 html {
   background: #111111;
   color: #fff;
   font-family: 'Special Elite', 'Microsoft YaHei', cursive;
+  cursor: url(cursor.png), auto;
 }
 
 h1,
@@ -16,7 +46,7 @@ h5,
 h6 {
   transition: all 0.5s ease-in-out;
   color: @bright-blood;
-  font-family: 'Nosifer', 'Microsoft YaHei', cursive;
+  font-family: 'dhand', 'Microsoft YaHei', cursive;
   &:hover {
     filter: drop-shadow(0px 0.1em 0px @blood)
       drop-shadow(0px 0.1em 0px @deep-blood);
@@ -66,12 +96,6 @@ ol {
   }
 }
 
-select {
-  background: #000;
-  color: @blood;
-  padding: 5px;
-  border-radius: 3px;
-}
 button {
   padding: 5px;
   background: @blood;
@@ -81,25 +105,33 @@ button {
   &:hover {
     background: @bright-blood;
   }
+  &:active {
+    background: @deep-blood;
+  }
 }
 
 a {
   color: inherit;
+  cursor: url(cursor.png), auto;
 }
 
 input,
 textarea,
-button {
+button,
+select {
   outline-color: @bright-blood;
 }
 
 input,
-textarea {
+textarea,
+select {
   background-color: @deep-blood;
   color: #fff;
   border-radius: 3px;
   border: none;
-  padding: 0.5em;
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0 0.5rem;
 }
 
 [type='checkbox'],
@@ -195,7 +227,7 @@ table {
   height: 4px;
   border-radius: 2px;
   box-shadow: 0px 0px 10px @bright-blood;
-  background: linear-gradient(45deg, @bright-blood, @deep-blood, @blood);
+  background: linear-gradient(45deg, @bright-blood, @blood, @deep-blood);
   background-size: 600% 600%;
   animation: flow 9s ease infinite;
 }
@@ -243,5 +275,16 @@ table {
   }
   90% {
     opacity: 0.6;
+  }
+}
+
+.bloody-box {
+  position: relative;
+  background-color: @blood;
+  margin: 30px 0;
+  canvas {
+    position: absolute;
+    top: 100%;
+    left: 0;
   }
 }

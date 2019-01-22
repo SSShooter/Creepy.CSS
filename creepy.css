@@ -1,7 +1,32 @@
+@font-face {
+  font-family: 'onryou';
+  src: url(creepyfont/onryou/onryou.TTF);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'zomzi';
+  src: url(creepyfont/ankokuzonji/Zomzi.TTF);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'death';
+  src: url(creepyfont/DeathOne/DeathOne.TTF);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'dhand';
+  src: url(creepyfont/DemonHands/DemonHands.TTF);
+  font-style: normal;
+  font-weight: normal;
+}
 html {
-  background: #000;
+  background: #111111;
   color: #fff;
   font-family: 'Special Elite', 'Microsoft YaHei', cursive;
+  cursor: url(cursor.png), auto;
 }
 h1,
 h2,
@@ -11,7 +36,7 @@ h5,
 h6 {
   transition: all 0.5s ease-in-out;
   color: #ec3a46;
-  font-family: 'Nosifer', 'Microsoft YaHei', cursive;
+  font-family: 'dhand', 'Microsoft YaHei', cursive;
 }
 h1:hover,
 h2:hover,
@@ -23,7 +48,7 @@ h6:hover {
 }
 body {
   font-family: 'Special Elite', cursive;
-  /* animation: dim 30s ease-in-out infinite; */
+  animation: dim 30s ease-in-out infinite;
 }
 ul {
   padding-left: 10px;
@@ -60,12 +85,6 @@ ol li:before {
   text-align: right;
   direction: rtl;
 }
-select {
-  background: #000;
-  color: #af111c;
-  padding: 5px;
-  border-radius: 3px;
-}
 button {
   padding: 5px;
   background: #af111c;
@@ -76,21 +95,29 @@ button {
 button:hover {
   background: #ec3a46;
 }
+button:active {
+  background: #52080d;
+}
 a {
   color: inherit;
+  cursor: url(cursor.png), auto;
 }
 input,
 textarea,
-button {
+button,
+select {
   outline-color: #ec3a46;
 }
 input,
-textarea {
+textarea,
+select {
   background-color: #52080d;
   color: #fff;
   border-radius: 3px;
   border: none;
-  padding: 0.5em;
+  height: 2rem;
+  line-height: 2rem;
+  padding: 0 0.5rem;
 }
 [type='checkbox'],
 [type='radio'] {
@@ -127,7 +154,7 @@ textarea {
   margin-right: 0.5em;
   vertical-align: text-bottom;
   background-size: 100% 100%;
-  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0D%0A%3C!--%20Generator%3A%20Adobe%20Illustrator%2016.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200)%20%20--%3E%0D%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20width%3D%22561px%22%20height%3D%22561px%22%20viewBox%3D%220%200%20561%20561%22%20style%3D%22enable-background%3Anew%200%200%20561%20561%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%0D%0A%09%3Cg%20id%3D%22visibility%22%3E%0D%0A%09%09%3Cpath%20style%3D%22fill%3A%23ff1c2b%3B%22%20d%3D%22M280.5%2C89.25C153%2C89.25%2C43.35%2C168.3%2C0%2C280.5c43.35%2C112.2%2C153%2C191.25%2C280.5%2C191.25S517.65%2C392.7%2C561%2C280.5%0D%0A%09%09%09C517.65%2C168.3%2C408%2C89.25%2C280.5%2C89.25z%20M280.5%2C408C209.1%2C408%2C153%2C351.9%2C153%2C280.5c0-71.4%2C56.1-127.5%2C127.5-127.5%0D%0A%09%09%09c71.4%2C0%2C127.5%2C56.1%2C127.5%2C127.5C408%2C351.9%2C351.9%2C408%2C280.5%2C408z%20M280.5%2C204c-43.35%2C0-76.5%2C33.15-76.5%2C76.5%0D%0A%09%09%09c0%2C43.35%2C33.15%2C76.5%2C76.5%2C76.5c43.35%2C0%2C76.5-33.15%2C76.5-76.5C357%2C237.15%2C323.85%2C204%2C280.5%2C204z%22%2F%3E%0D%0A%09%3C%2Fg%3E%0D%0A%3C%2Fsvg%3E%0D%0A");
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0A%3C!--%20Generator%3A%20Adobe%20Illustrator%2016.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200)%20%20--%3E%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Capa_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20width%3D%22561px%22%20height%3D%22561px%22%20viewBox%3D%220%200%20561%20561%22%20style%3D%22enable-background%3Anew%200%200%20561%20561%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%0A%09%3Cg%20id%3D%22visibility%22%3E%0A%09%09%3Cpath%20style%3D%22fill%3A%23ff1c2b%3B%22%20d%3D%22M280.5%2C89.25C153%2C89.25%2C43.35%2C168.3%2C0%2C280.5c43.35%2C112.2%2C153%2C191.25%2C280.5%2C191.25S517.65%2C392.7%2C561%2C280.5%0A%09%09%09C517.65%2C168.3%2C408%2C89.25%2C280.5%2C89.25z%20M280.5%2C408C209.1%2C408%2C153%2C351.9%2C153%2C280.5c0-71.4%2C56.1-127.5%2C127.5-127.5%0A%09%09%09c71.4%2C0%2C127.5%2C56.1%2C127.5%2C127.5C408%2C351.9%2C351.9%2C408%2C280.5%2C408z%20M280.5%2C204c-43.35%2C0-76.5%2C33.15-76.5%2C76.5%0A%09%09%09c0%2C43.35%2C33.15%2C76.5%2C76.5%2C76.5c43.35%2C0%2C76.5-33.15%2C76.5-76.5C357%2C237.15%2C323.85%2C204%2C280.5%2C204z%22%2F%3E%0A%09%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A");
   transition: all 0.3s ease-in;
   transform: scale(1, 0.4);
 }
@@ -172,7 +199,7 @@ table tr:last-of-type td:last-of-type {
   height: 4px;
   border-radius: 2px;
   box-shadow: 0px 0px 10px #ec3a46;
-  background: linear-gradient(45deg, #ec3a46, #52080d, #af111c);
+  background: linear-gradient(45deg, #ec3a46, #af111c, #52080d);
   background-size: 600% 600%;
   animation: flow 9s ease infinite;
 }
@@ -220,13 +247,12 @@ table tr:last-of-type td:last-of-type {
     opacity: 0.6;
   }
 }
-
-.bloody-box{
+.bloody-box {
   position: relative;
   background-color: #af111c;
   margin: 30px 0;
 }
-.bloody-box canvas{
+.bloody-box canvas {
   position: absolute;
   top: 100%;
   left: 0;

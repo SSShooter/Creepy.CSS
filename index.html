@@ -1,162 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Creepster|Nosifer|Special+Elite|Stardos+Stencil" rel="stylesheet">
-    <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="./creepy.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Reenie+Beanie"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC|Creepster|Nosifer|Special+Elite|Stardos+Stencil"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./creepy.css" />
     <title>CreepyDemo</title>
-</head>
+  </head>
 
-<body>
-    <div class="display" style="padding:30px;">
-        <div class="title">Creepy.CSS</div>
-        <div style="margin-top:10px;">Icons made by
-            <a href="http://www.freepik.com" title="Freepik">Freepik</a> from
-            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
-            <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
-        </div>
-        <div>
-            References
-            <a href="https://en.wikipedia.org/wiki/Japanese_horror">Japanese_horror wiki</a>
-        </div>
-        <div>
-            <a href="https://github.com/ssshooter/Creepy.CSS">github https://github.com/ssshooter/Creepy.CSS</a>
-        </div>
-        <p>title</p>
-        <h1>This is a Creepy h1</h1>
-        <h2>This is a Creepy h2</h2>
-        <h3>This is a Creepy h3</h3>
-        <h4>This is a Creepy h4</h4>
-        <h5>This is a Creepy h5</h5>
-        <h6>This is a Creepy h6</h6>
+  <body>
+    <audio src="http://amachamusic.chagasi.com/mp3/shoujorei.mp3" autoplay loop preload></audio>
+    <div class="display">
+      <header class="title bloody-box"><img src="logo.png" />Creepy.CSS</header>
+      <img
+        src="octocat.svg"
+        alt="link to github"
+        class="to-github"
+        onclick="window.open('https://github.com/ssshooter/Creepy.CSS')"
+      />
 
-        <p>divider</p>
-        <div>&lt;div class="divider"&gt;&lt;/div&gt;</div>
-        <br>
-        <div class="divider"></div>
+      <p>title</p>
+      <h1>This is a Creepy h1</h1>
+      <h2>This is a Creepy h2</h2>
+      <h3>This is a Creepy h3</h3>
+      <h4>This is a Creepy h4</h4>
+      <h5>This is a Creepy h5</h5>
+      <h6>This is a Creepy h6</h6>
 
-        <p>select</p>
-        <select name="" id="">
-            <option value="daada">Audition</option>
-            <option value="daada">The Happiness of the Katakuris</option>
-            <option value="daada">Ju-on series</option>
-            <option value="daada">One Missed Call (Chakushin ari) series</option>
-        </select>
+      <p>divider</p>
+      <div>&lt;div class="divider"&gt;&lt;/div&gt;</div>
+      <br />
+      <div class="divider"></div>
 
-        <p>radio</p>
-        <div>
-            <input type="radio" name="ra" id="r1">
-            <label for="r1">Notable films</label>
-            <input type="radio" name="ra" id="r2">
-            <label for="r2">Notable directors</label>
-        </div>
+      <p>BLOODY BOX</p>
+      <div>&lt;div class="bloody-box"&gt;&lt;/div&gt;</div>
+      <div class="bloody-box bloody-example">This is a BLOODY BOX.</div>
 
-        <p>checkbox</p>
-        <div>
-            <input type="checkbox" name="vehicle" value="Bike" id="bike" />
-            <label for="bike">Anime and manga</label>
-        </div>
-        <div>
-            <input type="checkbox" name="vehicle" value="Car" id="car" />
-            <label for="car">Video games</label>
-        </div>
-        <p>table</p>
-        <table>
-            <tr>
-                <th>Film</th>
-                <th>Country</th>
-                <th>Director</th>
-                <th>Music</th>
-            </tr>
-            <tr>
-                <td>Ring</td>
-                <td>Japan</td>
-                <td>Hideo Nakata</td>
-                <td>Kenji Kawai</td>
-            </tr>
-            <tr>
-                <td>Ju-On: The Curse</td>
-                <td>Japan</td>
-                <td>Takashi Shimizu</td>
-                <td>Geirî Ashiya</td>
-            </tr>
-        </table>
-        <p>ul li</p>
-        <ul>
-            <li>Forbidden Siren</li>
-            <li>Gakkō no Kaidan series</li>
-            <li>Cursed</li>
-            <li>Kuroneko</li>
-        </ul>
+      <p>button</p>
+      <button>submit</button>
+      <p>input</p>
+      <input type="text" />
+      <p>textarea</p>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+      <p>select</p>
+      <select name="" id="">
+        <option value="daada">Audition</option>
+        <option value="daada">The Happiness of the Katakuris</option>
+        <option value="daada">Ju-on series</option>
+        <option value="daada">One Missed Call (Chakushin ari) series</option>
+      </select>
 
-        <p>ol li</p>
-        <ol>
-            <li>Corpse Party</li>
-            <li>Fatal Frame</li>
-            <li>Silent Hill</li>
-            <li>Resident Evil</li>
-            <li>Calling</li>
-        </ol>
-        <p>button</p>
-        <button>submit</button>
-        <p>input</p>
-        <input type="text">
-        <p>textarea</p>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <p>jumpScare</p>
-        <button class="js-show">show</button>
-        <button class="js-loop">loop</button>
-        <button class="js-cancelloop">cancel loop</button>
+      <p>radio</p>
+      <div>
+        <input type="radio" name="ra" id="r1" />
+        <label for="r1">Notable films</label>
+        <input type="radio" name="ra" id="r2" />
+        <label for="r2">Notable directors</label>
+      </div>
 
-        <div class="bloody-box">
-            wwwwww
-            afiaji
-            fafjiafja
-            fa
-            fafjiaf
-        </div>
+      <p>checkbox</p>
+      <div>
+        <input type="checkbox" name="vehicle" value="Bike" id="bike" />
+        <label for="bike">Anime and manga</label>
+      </div>
+      <div>
+        <input type="checkbox" name="vehicle" value="Car" id="car" />
+        <label for="car">Video games</label>
+      </div>
+      <p>table</p>
+      <table>
+        <tr>
+          <th>Film</th>
+          <th>Country</th>
+          <th>Director</th>
+          <th>Music</th>
+        </tr>
+        <tr>
+          <td>Ring</td>
+          <td>Japan</td>
+          <td>Hideo Nakata</td>
+          <td>Kenji Kawai</td>
+        </tr>
+        <tr>
+          <td>Ju-On: The Curse</td>
+          <td>Japan</td>
+          <td>Takashi Shimizu</td>
+          <td>Geirî Ashiya</td>
+        </tr>
+      </table>
 
+      <p>ul li</p>
+      <ul>
+        <li>Forbidden Siren</li>
+        <li>Gakkō no Kaidan series</li>
+        <li>Cursed</li>
+        <li>Kuroneko</li>
+      </ul>
 
-        <div class="bloody-box">
-            wwwwww
-            afiajiwwwwww2222
-            fafjiafja
-            fa
-            fafjiaf
-        </div>
+      <p>ol li</p>
+      <ol>
+        <li>Corpse Party</li>
+        <li>Fatal Frame</li>
+        <li>Silent Hill</li>
+        <li>Resident Evil</li>
+        <li>Calling</li>
+      </ol>
+      <p>jumpScare</p>
+      <button class="js-show">show</button>
+      <button class="js-loop">loop</button>
+      <button class="js-cancelloop">cancel loop</button>
+      <div style="margin-top:30px;">
+        Icons made by
+        <a href="http://www.freepik.com" title="Freepik">Freepik</a> from
+        <a href="https://www.flaticon.com/" title="Flaticon"
+          >www.flaticon.com</a
+        >
+        is licensed by
+        <a
+          href="http://creativecommons.org/licenses/by/3.0/"
+          title="Creative Commons BY 3.0"
+          target="_blank"
+          >CC 3.0 BY</a
+        >
+      </div>
+      BGM is created by Music Atelier Amacha
+      <div>
+        References
+        <a href="https://en.wikipedia.org/wiki/Japanese_horror"
+          >Japanese_horror wiki</a
+        >
+      </div>
     </div>
-</body>
-<style>
+  </body>
+  <style>
     p {
-        font-size: 1.2em;
-        font-weight: bolder;
-        text-transform: capitalize;
+      font-size: 1.2em;
+      font-weight: bolder;
+      text-transform: capitalize;
     }
-
+    .display {
+      box-sizing: border-box;
+      max-width: 800px;
+      padding: 0 30px;
+      margin: 100px auto 20px;
+    }
+    .to-github {
+      position: fixed;
+      width: 100px;
+      bottom: 30px;
+      right: 30px;
+    }
     .title {
-        font-size: 3.8em;
-        font-weight: bolder;
-        font-family: 'Reenie Beanie', cursive;
+      box-sizing: border-box;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      right: 0;
+      font-size: 3rem;
+      font-weight: bolder;
+      font-family: 'dhand', cursive;
+      margin-top: 0;
+      padding-left: 30px;
+      z-index: 2;
+      vertical-align: middle;
     }
-</style>
-<script src="./creepy.js"></script>
-<script>
-    let jumpScare = creepy.jumpScare('https://wx3.sinaimg.cn/mw690/686d7361ly1fsfd8dlce1j20qo0k0wnn.jpg')
-    document.querySelector('.js-show').addEventListener('click',()=>{
-        jumpScare.show(2000)
+    .title img {
+      height: 3rem;
+      vertical-align: middle;
+    }
+    .bloody-example {
+      width: 200px;
+      height: 100px;
+      padding: 10px;
+    }
+  </style>
+  <script src="./creepy.js"></script>
+  <script>
+    let jumpScare = creepy.jumpScare(
+      'https://wx3.sinaimg.cn/mw690/686d7361ly1fsfd8dlce1j20qo0k0wnn.jpg'
+    )
+    document.querySelector('.js-show').addEventListener('click', () => {
+      jumpScare.show(2000)
     })
-    document.querySelector('.js-loop').addEventListener('click',()=>{
-        jumpScare.loop(4000,1000)
+    document.querySelector('.js-loop').addEventListener('click', () => {
+      jumpScare.loop(4000, 1000)
     })
-    document.querySelector('.js-cancelloop').addEventListener('click',()=>{
-        jumpScare.cancelLoop()
+    document.querySelector('.js-cancelloop').addEventListener('click', () => {
+      jumpScare.cancelLoop()
     })
     creepy.BloodyBoxInit()
-</script>
-
+  </script>
 </html>

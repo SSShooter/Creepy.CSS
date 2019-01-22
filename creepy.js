@@ -39,14 +39,13 @@ let creepy = {
       }
     }
   },
-  BloodyBoxInit(){
+  BloodyBoxInit() {
     var elList = document.querySelectorAll('.bloody-box')
     elList.forEach(el => {
       var newCanvas = document.createElement('canvas')
       el.appendChild(newCanvas)
       this.BloodyBox(newCanvas)
-    });
-    
+    })
   },
   BloodyBox(canvas) {
     var PEAK = 100
@@ -61,9 +60,18 @@ let creepy = {
     var color1 = '#af111c'
     var color2 = '#af111c'
 
+    var scrollTimeout = 2000
+    var startTime
     window.addEventListener('load', init)
     window.addEventListener('resize', resize)
+    window.addEventListener('scroll', scroll)
 
+    function scroll() {
+      if (+new Date() - scrollTimeout < startTime) return
+      startTime = +new Date()
+      peak = PEAK * 3
+      emitCenter = Math.floor(VertexListLength * Math.random())
+    }
     function resize() {
       initCanvas()
       var cW = canvas.width
@@ -106,8 +114,7 @@ let creepy = {
       for (var i = emitCenter - 1; i > 0; i--) {
         var distance = emitCenter - i
         if (distance > dd) distance = dd
-        YValueList[i] =
-          YValueList[i] -
+        YValueList[i] -=
           (YValueList[i] - YValueList[i + 1]) * (1 - 0.01 * distance)
       }
 
@@ -121,6 +128,10 @@ let creepy = {
       for (var i = 0; i < VertexList.length; i++) {
         VertexList[i].updateY(YValueList[i])
       }
+      // setTimeout(function() {
+      //   console.log(YValueList)
+      //   debugger
+      // }, 1000)
       draw()
     }
 
