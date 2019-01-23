@@ -13,6 +13,7 @@ let creepy = {
         background-size: contain;
         background-repeat:no-repeat;
         background-position:center; 
+        z-index:100000;
       `
     document.body.appendChild(conteiner)
     return {

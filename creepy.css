@@ -22,6 +22,38 @@
   font-style: normal;
   font-weight: normal;
 }
+.blood {
+  color: #af111c;
+}
+.bright-blood {
+  color: #ec3a46;
+}
+.deep-blood {
+  color: #52080d;
+}
+.onryou {
+  font-family: 'onryou';
+  letter-spacing: 0.2em;
+  line-height: 1.2em;
+}
+.zomzi {
+  font-family: 'zomzi';
+  letter-spacing: 0.2em;
+  line-height: 1.2em;
+}
+.death {
+  font-family: 'death';
+  letter-spacing: 0.2em;
+  line-height: 1.2em;
+}
+.dhand {
+  font-family: 'dhand';
+  letter-spacing: 0.2em;
+  line-height: 1.2em;
+}
+.flash:hover {
+  animation: flash 0.5s ease;
+}
 html {
   background: #111111;
   color: #fff;
@@ -44,7 +76,7 @@ h3:hover,
 h4:hover,
 h5:hover,
 h6:hover {
-  filter: drop-shadow(0px 0.1em 0px #af111c) drop-shadow(0px 0.1em 0px #52080d);
+  filter: drop-shadow(0px 0.1em 0px #af111c) drop-shadow(0px 0.2em 0px #52080d);
 }
 body {
   font-family: 'Special Elite', cursive;
@@ -86,7 +118,7 @@ ol li:before {
   direction: rtl;
 }
 button {
-  padding: 5px;
+  padding: 0.7rem;
   background: #af111c;
   color: #fff;
   border: none;
@@ -97,6 +129,16 @@ button:hover {
 }
 button:active {
   background: #52080d;
+}
+.button-bright {
+  background: #eeeeee;
+  color: #ec3a46;
+}
+.button-bright:hover {
+  background: #ffffff;
+}
+.button-bright:active {
+  background: #999999;
 }
 a {
   color: inherit;
@@ -212,6 +254,21 @@ table tr:last-of-type td:last-of-type {
   }
   100% {
     background-position: 11% 0%;
+  }
+}
+@keyframes flash {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.1;
   }
 }
 @keyframes dim {

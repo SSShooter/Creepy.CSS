@@ -31,6 +31,48 @@
   font-weight: normal;
 }
 
+// expose color
+.blood {
+  color: @blood;
+}
+
+.bright-blood {
+  color: @bright-blood;
+}
+.deep-blood {
+  color: @deep-blood;
+}
+
+// expose font
+.onryou {
+  font-family: 'onryou';
+  letter-spacing: 0.2em;
+  line-height: 1.2em;
+}
+
+.zomzi {
+  font-family: 'zomzi';
+  letter-spacing: 0.2em;
+  line-height: 1.2em;
+}
+
+.death {
+  font-family: 'death';
+  letter-spacing: 0.2em;
+  line-height: 1.2em;
+}
+
+.dhand {
+  font-family: 'dhand';
+  letter-spacing: 0.2em;
+  line-height: 1.2em;
+}
+
+.flash {
+  &:hover {
+    animation: flash 0.5s ease;
+  }
+}
 html {
   background: #111111;
   color: #fff;
@@ -49,7 +91,7 @@ h6 {
   font-family: 'dhand', 'Microsoft YaHei', cursive;
   &:hover {
     filter: drop-shadow(0px 0.1em 0px @blood)
-      drop-shadow(0px 0.1em 0px @deep-blood);
+      drop-shadow(0px 0.2em 0px @deep-blood);
   }
 }
 
@@ -97,7 +139,7 @@ ol {
 }
 
 button {
-  padding: 5px;
+  padding: 0.7rem;
   background: @blood;
   color: #fff;
   border: none;
@@ -107,6 +149,17 @@ button {
   }
   &:active {
     background: @deep-blood;
+  }
+}
+
+.button-bright {
+  background: #eeeeee;
+  color: @bright-blood;
+  &:hover {
+    background: #ffffff;
+  }
+  &:active {
+    background: #999999;
   }
 }
 
@@ -241,6 +294,22 @@ table {
   }
   100% {
     background-position: 11% 0%;
+  }
+}
+
+@keyframes flash {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.1;
   }
 }
 

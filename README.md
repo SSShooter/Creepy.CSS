@@ -1,7 +1,9 @@
 # CreepyUI
-a creepy style UI
+A creepy style UI
 ## thanks
 http://www.ankokukoubou.com/
+
+Music Atelier Amacha
 ## main color     
 #af111c     
 ## main font    
@@ -11,14 +13,15 @@ http://www.ankokukoubou.com/
 lessc creepy.less creepy.css
 ```
 ## use
-font + normalize + creepy.css
+### font + normalize + creepy.css
 ```html
 <head>
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Creepster|Nosifer|Special+Elite|Stardos+Stencil" rel="stylesheet">
   <link rel="stylesheet" href="./normalize.css">
   <link rel="stylesheet" href="./creepy.css">
 </head>
-jumpscare
+```
+### jumpscare
 ```html
 <script src="./creepy.js"></script>
 ```
@@ -35,5 +38,13 @@ document.querySelector('.js-show').addEventListener('click',()=>{
 document.querySelector('.js-loop').addEventListener('click',()=>{
     jumpScare.loop(4000,1000)
 })
+```
+
+### BloodyBoxInit
+```html
+<div class="bloody-box">This is a BLOODY BOX.</div>
+```
+```javascript
+creepy.BloodyBoxInit()
 ```
 

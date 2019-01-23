@@ -18,16 +18,67 @@
   </head>
 
   <body>
-    <audio src="http://amachamusic.chagasi.com/mp3/shoujorei.mp3" autoplay loop preload></audio>
+    <audio
+      src="http://amachamusic.chagasi.com/mp3/shoujorei.mp3"
+      autoplay
+      loop
+      preload
+    ></audio>
     <div class="display">
-      <header class="title bloody-box"><img src="logo.png" />Creepy.CSS</header>
+      <header class="title bloody-box">
+        <img src="logo.png" />Creepy.CSS
+        <div class="button-group">
+          <div><a href="#class">class</a></div>
+          <div><a href="#element">element</a></div>
+          <div><a href="#javascript">javascript</a></div>
+        </div>
+      </header>
       <img
         src="octocat.svg"
         alt="link to github"
         class="to-github"
         onclick="window.open('https://github.com/ssshooter/Creepy.CSS')"
       />
+      <h2 name="class" id="class">Class</h2>
+      <h3>Fonts</h3>
+      <div class="code">&lt;div class="onryou"&gt;&lt;/div&gt;</div>
+      <div class="onryou">
+        Ring is a Japanese mystery horror novel by Koji Suzuki first published
+        in 1991.
+        『リング』は、日本の作家である鈴木光司によるミステリ・ホラー小説。
+      </div>
+      <div class="code">&lt;div class="zomzi"&gt;&lt;/div&gt;</div>
+      <div class="zomzi">
+        Ring is a Japanese mystery horror novel by Koji Suzuki first published
+        in 1991.
+        『リング』は、日本の作家である鈴木光司によるミステリ・ホラー小説。
+      </div>
+      <div class="code">&lt;div class="death"&gt;&lt;/div&gt;</div>
+      <div class="death">
+        Ring is a Japanese mystery horror novel by Koji Suzuki first published
+        in 1991.
+      </div>
+      <div class="code">&lt;div class="dhand"&gt;&lt;/div&gt;</div>
+      <div class="dhand">
+        Ring is a Japanese mystery horror novel by Koji Suzuki first published
+        in 1991.
+      </div>
 
+      <h3>BLOODY BOX</h3>
+      <div class="code">&lt;div class="bloody-box"&gt;&lt;/div&gt;</div>
+      <a href="#binit">init needed</a>
+      <div class="bloody-box bloody-example">This is a BLOODY BOX.</div>
+
+      <h3>flash</h3>
+      <div class="code">&lt;div class="flash"&gt;&lt;/div&gt;</div>
+      <div class="flash">Hey! hover me!</div>
+
+      <h3>divider</h3>
+      <div class="code">&lt;div class="divider"&gt;&lt;/div&gt;</div>
+      <br />
+      <div class="divider"></div>
+
+      <h2 name="element" id="element">Element</h2>
       <p>title</p>
       <h1>This is a Creepy h1</h1>
       <h2>This is a Creepy h2</h2>
@@ -36,21 +87,15 @@
       <h5>This is a Creepy h5</h5>
       <h6>This is a Creepy h6</h6>
 
-      <p>divider</p>
-      <div>&lt;div class="divider"&gt;&lt;/div&gt;</div>
-      <br />
-      <div class="divider"></div>
-
-      <p>BLOODY BOX</p>
-      <div>&lt;div class="bloody-box"&gt;&lt;/div&gt;</div>
-      <div class="bloody-box bloody-example">This is a BLOODY BOX.</div>
-
       <p>button</p>
-      <button>submit</button>
+      <button>submit</button> <button class="button-bright">submit</button>
+
       <p>input</p>
       <input type="text" />
+
       <p>textarea</p>
       <textarea name="" id="" cols="30" rows="10"></textarea>
+
       <p>select</p>
       <select name="" id="">
         <option value="daada">Audition</option>
@@ -76,6 +121,7 @@
         <input type="checkbox" name="vehicle" value="Car" id="car" />
         <label for="car">Video games</label>
       </div>
+
       <p>table</p>
       <table>
         <tr>
@@ -114,11 +160,20 @@
         <li>Resident Evil</li>
         <li>Calling</li>
       </ol>
-      <p>jumpScare</p>
+
+      <h2 name="javascript" id="javascript">Javascript</h2>
+      <h3>jumpScare</h3>
       <button class="js-show">show</button>
       <button class="js-loop">loop</button>
       <button class="js-cancelloop">cancel loop</button>
-      <div style="margin-top:30px;">
+      <div class="code">jumpScare.show(2000)</div>
+      <div class="code">jumpScare.loop(4000, 1000)</div>
+      <div class="code">jumpScare.cancelLoop()</div>
+
+      <h3 name="binit" id="binit">BLOODY BOX init</h3>
+      <div class="code">creepy.BloodyBoxInit()</div>
+
+      <div style="margin-top:80px;">
         Icons made by
         <a href="http://www.freepik.com" title="Freepik">Freepik</a> from
         <a href="https://www.flaticon.com/" title="Flaticon"
@@ -132,7 +187,8 @@
           >CC 3.0 BY</a
         >
       </div>
-      BGM is created by Music Atelier Amacha
+      <div>BGM is created by Music Atelier Amacha</div>
+      <div>Font from http://www.ankokukoubou.com/</div>
       <div>
         References
         <a href="https://en.wikipedia.org/wiki/Japanese_horror"
@@ -144,8 +200,14 @@
   <style>
     p {
       font-size: 1.2em;
-      font-weight: bolder;
       text-transform: capitalize;
+    }
+    button {
+      margin-right: 20px;
+    }
+    .code {
+      font-family: monospace;
+      margin: 10px 0;
     }
     .display {
       box-sizing: border-box;
@@ -166,7 +228,6 @@
       top: 0;
       right: 0;
       font-size: 3rem;
-      font-weight: bolder;
       font-family: 'dhand', cursive;
       margin-top: 0;
       padding-left: 30px;
@@ -177,9 +238,20 @@
       height: 3rem;
       vertical-align: middle;
     }
+    .title .button-group {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 3rem;
+      font-family: 'zomzi', cursive;
+      font-size: 2rem;
+    }
+    .title .button-group div {
+      display: inline-block;
+    }
     .bloody-example {
       width: 200px;
-      height: 100px;
+      height: 50px;
       padding: 10px;
     }
   </style>
